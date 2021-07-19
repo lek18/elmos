@@ -72,6 +72,11 @@ def print_hi(name):
 
     # Preparing the elmo *cartoon* models
 
+    import tensorflow_hub as hub
+    import tensorflow as tf
+
+    elmo = hub.Module("https://tfhub.dev/google/elmo/2",trainable=True)
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
